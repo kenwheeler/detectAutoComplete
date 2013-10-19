@@ -15,7 +15,7 @@ var detectAutoComplete = (function(){
     setTimer();
   }
 
-  var getElements = function(){
+  function getElements(){
     this.inputs = document.getElementsByTagName('input');
     this.selects = document.getElementsByTagName('select');
     this.formElements = [];
@@ -27,13 +27,13 @@ var detectAutoComplete = (function(){
     }
   }
 
-  var setTimer = function(){
+  function setTimer(){
     window.setInterval(function(){
       checkElements();
     },1000);
   }
 
-  var checkElements = function(){
+  function checkElements(){
     for(el in this.formElements){
       if(this.formElements[el].element.value != this.formElements[el].value){
         var evt = document.createEvent("HTMLEvents");
