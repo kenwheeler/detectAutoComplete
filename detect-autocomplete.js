@@ -16,12 +16,8 @@ var detectAutoComplete = (function(){
   }
 
   function getElements(){
-    this.inputs = document.getElementsByTagName('input');
     this.selects = document.getElementsByTagName('select');
     this.formElements = [];
-    for(var i=0; i < this.inputs.length; i++){
-      this.formElements.push({element: this.inputs.item(i), value: this.inputs.item(i).value})
-    }
     for(var i=0; i < this.selects.length; i++){
       this.formElements.push({element: this.selects.item(i), value: this.selects.item(i).value})
     }
